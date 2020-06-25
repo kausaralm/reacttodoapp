@@ -10,9 +10,9 @@ export default class SingleTask extends Component {
     }
 
     render() {
-
         let status = this.props.task.status == "done" ? "checked" : "";
-        return <li className={status} onClick={() =>{this.handleToggle(this.props.id)}} >{this.props.task.task_title}<span className="close" onClick = {(id) =>{this.handleClick(this.props.itemID(id))}} >x</span>
+        return <li><span style={{display: "inline-block"}} className={status}  onClick={() =>{this.handleToggle(this.props.id)}} >{this.props.task.task_title}</span>
+        <span className="close" onClick = {() =>{this.handleClick(this.props.id)}} >x</span>
    </li> 
  
     }
